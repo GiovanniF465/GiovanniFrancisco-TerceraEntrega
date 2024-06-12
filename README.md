@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación web para gestionar el registro de empleados.
 
+El nombre de la aplicación fue asignado como "main"
+
 ## Estructura del Proyecto
 
 ### Plantillas

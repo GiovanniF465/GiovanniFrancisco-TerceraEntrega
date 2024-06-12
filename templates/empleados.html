@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block titleHead %}
+<title>Empleados</title>
+{% endblock titleHead %}
+
+{% block h1_titulo %}
+    Listado de Empleados
+{% endblock h1_titulo %}
+
+{% block main %}
+
+<form action={% url "empleadosV" %} method="get">
+    {{formulario}}
+    <input type="submit" value="Buscar">
+</form>
+
+{% if empleados %}
+    <ul>
+        {% for empleado in empleados %}
+        <li>
+            {{empleado}} | <a href={% url "eliminarEmpleado" empleado.id%}>Eliminar</a> | <a href={% url "editarEmpleado" empleado.id%}>Editar</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay empleados para mostrar</p>
+{% endif %}
+{% endblock main %}

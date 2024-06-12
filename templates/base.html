@@ -22,7 +22,7 @@
                 <div class="list-group list-group-flush">
                     {% comment "" %}<a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url "empleadoNuevo" "Giovanni" "Programador" "asa@dsa.mx"%}>Crear Empleado</a>{% endcomment %}
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url "empleadoNuevo"%}>Crear Empleado</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url "Inicio" %}>Mostrar Empleados</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url "empleadosV" %}>Mostrar Empleados</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url "Inicio" %}>Overview</a>
                 </div>
             </div>
@@ -41,6 +41,7 @@
                 </nav>
                 <!-- Page content-->
                 {% block  main%}
+                <h1>Sistema de Empleados</h1>
                 {% endblock  %}
                 
             </div>

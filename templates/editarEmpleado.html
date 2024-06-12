@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block titleHead %}
-<title>Creación Empleado</title>
+<title>Edición Empleado</title>
 {% endblock titleHead %}
 
 {% block h1_titulo %}
-    Creación de Empleado
+    Edición de Empleado: {{empleado.nombre}}
 {% endblock h1_titulo %}
 
 {% block main %}
-<form action={% url "empleadoNuevo" %} method="POST">
+<form action={% url "editarEmpleado" empleado.id%} method="POST">
     {% csrf_token %}
     {{formulario}}
     <input type="submit" value="Enviar">
